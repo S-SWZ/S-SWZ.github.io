@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>HEXO博客如何上传图片以及图片加载问题</title>
+    <link href="/2024/11/20/HEXO%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/"/>
+    <url>/2024/11/20/HEXO%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>一，如何上传图片</p><p>1.修改 Hexo 博客目录中的 _config.yml，打开这个配置是为了在生成文章的时候生成一个同名的资源目录用于存放图片文件。</p><p>找到post_asset_folder: </p><p>将冒号后改为 true（注意true前有一个空格）</p><p>2.在资源目录中放一张图片</p><p>3.图片引入</p><p><img src="/img/1.png" alt="图片介绍"></p><p>图片的引入方式可参考官方文档 <a href="https://hexo.io/zh-cn/docs/asset-folders.html%EF%BC%8C%E6%9C%89%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E3%80%82">https://hexo.io/zh-cn/docs/asset-folders.html，有详细介绍。</a></p><p>4.如果用Typora等软件，可直接粘贴。</p><p>二，图片上传问题</p><p><img src="/img/2.png" alt="图片介绍"></p><p>AI给我的解答如下：</p><p>一、配置问题<br>post_asset_folder设置：<br>Hexo博客的图片上传功能依赖于在_config.yml文件中正确设置post_asset_folder选项。确保此选项被设置为true。这样，在创建新的Markdown（md）文件时，Hexo会自动生成一个同名文件夹用于存放图片。<br>插件安装：<br>某些Hexo主题或配置可能需要额外的插件来支持图片上传。例如，hexo-asset-image插件（注意：有文章指出hexo-asset-image插件可能已经过时，建议使用hexo-asset-img插件）可以帮助管理图片资源。通过运行npm install hexo-asset-img –save命令来安装此插件（确保使用的是正确的插件名称）。<br>二、路径问题<br>图片路径不正确：<br>在Markdown文件中引用图片时，应使用正确的相对路径。如果图片存放在与Markdown文件同名的文件夹中，则路径应为<img src="/%E5%9B%BE%E7%89%87%E5%90%8D%E7%A7%B0.jpg" alt="图片名称">（注意替换为实际的图片名称和格式）。<br>Markdown与HTML路径转换：<br>Hexo在将Markdown文件转换为HTML文件时，会处理图片路径的转换。确保在运行hexo g（生成静态文件）和hexo d（部署到服务器）命令后，图片路径被正确转换。<br>三、编辑器问题<br>Typora等编辑器配置：<br>如果使用Typora等Markdown编辑器，确保在编辑器中正确配置了图片上传路径。例如，在Typora中，可以通过偏好设置将图片复制到指定路径（如.&#x2F;$(filename)），这样粘贴图片时，Typora会自动将图片复制到正确的文件夹中。<br>四、其他注意事项<br>图片格式和大小：<br>确保上传的图片格式和大小符合Hexo博客的要求。某些格式或过大的图片可能会导致上传失败。<br>GitHub等托管平台限制：<br>如果将Hexo博客部署到GitHub等托管平台，请确保平台支持图片上传和存储，并检查是否有相关的限制（如文件大小、格式等）。<br>清除缓存：<br>有时浏览器缓存或Hexo缓存可能导致图片无法显示。尝试清除缓存后重新加载页面。<br>综上所述，解决Hexo博客无法上传图片的问题需要从配置、路径、编辑器和其他注意事项等多个方面进行检查和调整。如果问题仍然存在，建议查阅Hexo官方文档或寻求社区的帮助。</p><p>三，图片加载问题</p><p><img src="/img/3.png" alt="图片介绍"></p><p>这里推荐一篇博文：<a href="https://blog.csdn.net/lengcs/article/details/143816877?ops_request_misc=&request_id=&biz_id=102&utm_term=hexo%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E5%A4%B1%E8%B4%A5&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-143816877.142%5Ev100%5Epc_search_result_base8&spm=1018.2226.3001.4187">https://blog.csdn.net/lengcs/article/details/143816877?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=hexo%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E5%A4%B1%E8%B4%A5&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-143816877.142^v100^pc_search_result_base8&amp;spm=1018.2226.3001.4187</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何安装IDA</title>
+    <link href="/2024/11/20/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85IDA/"/>
+    <url>/2024/11/20/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85IDA/</url>
+    
+    <content type="html"><![CDATA[<p>IDA，全称通常指的是“Interactive Disassembler”（交互式反汇编器），这是一款由Hex-Rays公司开发的强大的反汇编工具。IDA Pro是IDA的商业化版本，被广泛用于逆向工程、恶意软件分析、漏洞研究等领域。它支持多种处理器架构和文件格式，能够生成高质量的反汇编代码，并提供丰富的功能来帮助用户理解和分析二进制文件。</p><p>IDA在逆向工程领域具有广泛的应用，它可以帮助用户理解二进制文件的内部工作原理，分析恶意软件的行为，以及发现软件中的漏洞等。</p><p>分享免费下载地址：<a href="https://gitcode.com/open-source-toolkit/2813d/?utm_source=tools_gitcode&index=top&type=card&">https://gitcode.com/open-source-toolkit/2813d/?utm_source=tools_gitcode&amp;index=top&amp;type=card&amp;</a></p><p>1.找到下载的 ida.exe 或 ida64.exe 文件。</p><p><img src="C:\Users\Administrator\hexo-blog\source_posts\如何安装IDA.assets\2efe89cbf6d0cce3cdc19a4a2d49b0fe.png" alt="2efe89cbf6d0cce3cdc19a4a2d49b0fe"></p><p>2.双击运行对应的 exe 文件，按照提示完成安装过程。</p><p><img src="C:\Users\Administrator\hexo-blog\source_posts\如何安装IDA.assets\IDA安装完成样例.png" alt="IDA安装完成样例"></p><p>IDA使用方法：</p><p><a href="https://blog.csdn.net/m0_73644864/article/details/128376581?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522182b5a7e66aa53795088594ba77f03ef%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=182b5a7e66aa53795088594ba77f03ef&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-128376581-null-null.142%5Ev100%5Epc_search_result_base8&utm_term=ida&spm=1018.2226.3001.4187">https://blog.csdn.net/m0_73644864/article/details/128376581?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522182b5a7e66aa53795088594ba77f03ef%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=182b5a7e66aa53795088594ba77f03ef&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-128376581-null-null.142^v100^pc_search_result_base8&amp;utm_term=ida&amp;spm=1018.2226.3001.4187</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>识时务者的个人博客</title>
+    <link href="/2024/11/15/%E8%AF%86%E6%97%B6%E5%8A%A1%E8%80%85%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2024/11/15/%E8%AF%86%E6%97%B6%E5%8A%A1%E8%80%85%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h1><p>这是我的第一篇 HEXO 博客文章。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2024/11/14/hello%20world/"/>
+    <url>/2024/11/14/hello%20world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>

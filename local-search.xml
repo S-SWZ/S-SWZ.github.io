@@ -4,13 +4,38 @@
   
   
   <entry>
+    <title>BUUCTFMISC（1到20wp）</title>
+    <link href="/2024/12/13/BUUCTFMISC/"/>
+    <url>/2024/12/13/BUUCTFMISC/</url>
+    
+    <content type="html"><![CDATA[<p>1.签到题：填入flag即可</p><p>2.金三胖：下载文件后显示将军动图</p><p>​                 （1）用剪辑软件慢速逐帧播放</p><p>​                 （2）用Stegsolve逐个frame查看，第21、51、79 frame拼起来是 flag{he11ohongke}</p><p>3.你竟然赶我走：用记事本打开图片划到最下面找到flag或Ctrl+F查找flag</p><p>4.二维码：（1）先用 QR Research 扫，无果</p><p>​                   （2）将图片拖到 010Editor 中</p><p><img src="/img/8a5c623a25eecc0632a8386dd48b07fd_5c275c945253add5b9b8e5f9d194bcf7.png" alt="8a5c623a25eecc0632a8386dd48b07fd_5c275c945253add5b9b8e5f9d194bcf7"></p><p>​                    （3）发现PK zip文件头(50 4B 03 04)，分离出来，保存成zip文件</p><p>​                    （4）打开zip，里面有一个txt文件，但是被加密了，使用 Ziperello 进行暴力破解zip(使用纯数字)，得到zip文件的密码，打开文件得到flag</p><p>5.大白：winhex修改图片的高度,将01改为A7</p><p><img src="/img/09bbb6363a63504090f2cb5dd9d17e4e.png" alt="09bbb6363a63504090f2cb5dd9d17e4e"></p><p>6.乌镇峰会种图:</p><p>将图片用 010Editor或记事本 打开，flag在文件末尾</p><p>7.wireshark：</p><p>8.N种方法解决：</p><p>9.基础破解：</p><p>10.文件中的秘密：</p><p>打开图片属性-&gt;详细信息<img src="/img/ddfec5a5be7d63c0c9e92c2f3b979ec2.png" alt="ddfec5a5be7d63c0c9e92c2f3b979ec2"></p><p>flag在图片exif中</p><p>11.zip伪加密：</p><p>直接使用 010Editor 打开</p><p> 笔记：</p><p> <strong>未</strong>加密：</p><p> 文件头中的全局方式位标记为00 00</p><p> 目录中源文件的全局方式位标记为00 00</p><p> <strong>伪</strong>加密：</p><p> 文件头中的全局方式位标记为00 00</p><p> 目录中源文件的全局方式位标记为09 00</p><p> <strong>真</strong>加密：</p><p> 文件头中的全局方式位标记为09 00</p><p> 目录中源文件的全局方式位标记为09 00</p><p>12.LSB：</p><p>LSB隐写（最低有效位隐写）：<br>LSB 全称为 least significant bit，是最低有效位的意思。Lsb 图片隐写是基于 lsb 算法的一种图片隐写术，</p><p>我们首先下载到一张图片，放到 StegSolve 中分析，使用 Data Extract 模式</p><p>LSB是最低有效位隐写，所以我们只需要最低位数据就行：</p><p>选择rgb最低位后，点击preview，发现生成了png16进制数据，我们点击 sava bin保存为png图片即可。</p><p>发现图片是二维码，使用QR扫一下得到flag</p><p>13.被嗅探的流量：</p><p>14.rar：</p><p>15.qr：</p><p>16.镜子里面的世界：</p><p>17.爱因斯坦：</p><p>18.ningen：</p><p>19.小明的保险箱：</p><p>20.easycap：</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>CTF MISC wp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CTF MISC wp</title>
-    <link href="/2024/12/12/wp/"/>
-    <url>/2024/12/12/wp/</url>
+    <link href="/2024/12/12/CTF%20MISC%20wp/"/>
+    <url>/2024/12/12/CTF%20MISC%20wp/</url>
     
     <content type="html"><![CDATA[<p><img src="/img/CTF-web-wp.assets/avatar-17339976062775.png" alt="avatar-17339976062775"></p><p><img src="/img/CTF-web-wp.assets/avatar.png" alt="avatar"></p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>CTF MISC wp</tag>
+      
+    </tags>
     
   </entry>
   
@@ -24,6 +49,12 @@
     <content type="html"><![CDATA[<p><img src="/img/CTF-web-wp.assets/avatar.png" alt="avatar"></p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>CTF web wp</tag>
+      
+    </tags>
     
   </entry>
   

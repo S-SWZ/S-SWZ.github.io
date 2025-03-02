@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>CTF启航杯_wp</title>
+    <link href="/2025/03/02/CTF%E5%90%AF%E8%88%AA%E6%9D%AF-wp/"/>
+    <url>/2025/03/02/CTF%E5%90%AF%E8%88%AA%E6%9D%AF-wp/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/img/CTF%E5%90%AF%E8%88%AA%E6%9D%AF_wp-1.png" alt="CTF启航杯_wp-1"></p><p><img src="/img/CTF%E5%90%AF%E8%88%AA%E6%9D%AF_wp-2-17409301070406.png" alt="CTF启航杯_wp-2"></p><p><img src="/img/CTF%E5%90%AF%E8%88%AA%E6%9D%AF_wp-3.png" alt="CTF启航杯_wp-3"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>BUUCTF_BASIC_wp</title>
+    <link href="/2025/01/12/BUUCTF-BASIC-wp/"/>
+    <url>/2025/01/12/BUUCTF-BASIC-wp/</url>
+    
+    <content type="html"><![CDATA[<h1 id="BUUCTF-BASIC-wp"><a href="#BUUCTF-BASIC-wp" class="headerlink" title="BUUCTF_BASIC_wp"></a>BUUCTF_BASIC_wp</h1><h2 id="1-BUU-LFI-COURSE-1"><a href="#1-BUU-LFI-COURSE-1" class="headerlink" title="1.BUU LFI COURSE 1"></a>1.BUU LFI COURSE 1</h2><p>1.打开靶场，查看源代码，发现存在文件包含漏洞</p><p><img src="/img/image-20250112175046734.png" alt="image-20250112175046734"></p><p>2.用<a href="https://so.csdn.net/so/search?q=get&spm=1001.2101.3001.7020">get</a>传参，且参数为file输入?file&#x3D;ls</p><p><img src="/img/image-20250112180317474.png" alt="image-20250112180317474"></p><p>3.尝试退到根目录去寻找flag，也就是四次…&#x2F;flag</p><p>?file&#x3D;..&#x2F;..&#x2F;..&#x2F;..&#x2F;flag 得到flag{c571f173-c9b1-4e32-84ac-f523d4d0ed08}</p><h2 id="2-BUU-BRUTE-1"><a href="#2-BUU-BRUTE-1" class="headerlink" title="2.BUU BRUTE 1"></a>2.BUU BRUTE 1</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>CTF web wp CTF MISC wp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>BUUCTF-web-wp</title>
     <link href="/2024/12/14/BUUCTF-web-wp/"/>
     <url>/2024/12/14/BUUCTF-web-wp/</url>
